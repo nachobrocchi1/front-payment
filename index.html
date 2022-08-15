@@ -144,7 +144,7 @@
         </div>
         <div class="field-container">
             <label for="amount">Monto</label>
-            <input id="amount" maxlength="12" type="text" inputmode="numeric">
+            <input id="amount" maxlength="12" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
         </div>
        
         <button onclick="paymentFunction()">Submit</button>
@@ -152,15 +152,15 @@
     </div>
     <div class="response_box" id="response" style="visibility:hidden">
         <div class="field-container">
-            <h4 for="Response">ResponseBytes</h4>
+            <h4 for="Response">Response JSON</h4>
             <p id="ResponseJSON"></p>
         </div>
         <div class="field-container">
-            <h4 for="RequestBytes">RequestBytes</h4>
+            <h4 for="RequestBytes">Request Bytes ISO 8583</h4>
             <p id="RequestBytes"></p>
         </div>
         <div class="field-container">
-            <h4 for="ResponseBytes">ResponseBytes</h4>
+            <h4 for="ResponseBytes">Response Bytes ISO 8583</h4>
             <p id="ResponseBytes"></p>
         </div>
 
