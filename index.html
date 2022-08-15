@@ -144,7 +144,8 @@
         </div>
         <div class="field-container">
             <label for="amount">Monto</label>
-            <input id="amount" maxlength="12" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
+            <input id="amount" maxlength="12" pattern="[0-9]*" type="text" inputmode="numeric">
+            <!-- <input id="amount" maxlength="12" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');"> -->
         </div>
        
         <button onclick="paymentFunction()">Submit</button>
