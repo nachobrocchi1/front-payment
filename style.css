@@ -26,8 +26,8 @@ button{
     padding: 8px 16px;
     vertical-align: middle;
     overflow: hidden;
-    color: inherit;
-    background-color: lightblue;
+    color: white;
+    background-color: royalblue;
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
@@ -369,4 +369,11 @@ input {
 .creditcard.flipped {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
+}
+
+.response_box{
+    width: 90%;
+    align-content: center;
+    text-align: center;
+    height:auto;
 }
