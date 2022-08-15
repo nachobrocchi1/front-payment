@@ -2,15 +2,10 @@ function paymentFunction() {
     window.console.info("Paying..")
     var request = new Map();
 
-    window.console.info("card:" + document.getElementById("cardnumber").value)
-    window.console.info("name:" + document.getElementById("name").value)
-    window.console.info("expirationdate:" + document.getElementById("expirationdate").value)
-    window.console.info("securitycode:" + document.getElementById("securitycode").value)
-
-
     var card_number = document.getElementById("cardnumber").value.replace(/\s+/g, '');
     var expiration_date = document.getElementById("expirationdate").value.replace("/", "");
     var card_code = document.getElementById("securitycode").value
+    var amount = document.getElementById("amount").value
     var d = new Date()
     var datestring = ("0" + (d.getMonth() + 1)).slice(-2) + ("0" + d.getDate()).slice(-2) + ("0" + d.getHours()).slice(-2) + ("0" + d.getMinutes()).slice(-2) + ("0" + d.getSeconds()).slice(-2);
     var timestring = ("0" + d.getHours()).slice(-2) + ("0" + d.getMinutes()).slice(-2) + ("0" + d.getSeconds()).slice(-2);
@@ -21,7 +16,7 @@ function paymentFunction() {
         fields: {
             2: card_number,                 // Primary Account Number
             3: "000001",                    // Processing code
-            4: "000000001000",              // Amount - 1000
+            4: amount,                      // Amount
             7: datestring,                  // Transmission date - today
             12: timestring,                 // Time - now
             13: daystring,                  // Date - today

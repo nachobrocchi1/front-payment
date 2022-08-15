@@ -20,10 +20,11 @@ body {
 }
 
 button{
-    margin-bottom: 16px!important;
+    margin-bottom: 15px!important;
+    margin-top: 20px;
     border: none;
     display: inline-block;
-    padding: 8px 16px;
+    padding: 16px;
     vertical-align: middle;
     overflow: hidden;
     color: white;
